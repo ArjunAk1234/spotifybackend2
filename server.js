@@ -14,13 +14,13 @@ app.use(bodyParser.json());
 //   origin: 'https://spotifyclone4frontend123.vercel.app', // Replace with your frontend URL
 // }));
 app.use(cors({
-  origin: 'https://spotifyclone4frontend123.vercel.app', // Allow frontend domain
+  origin: 'http://localhost:4200', // Allow frontend domain
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true // If using cookies or tokens
 }));
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://spotifyclone4frontend123.vercel.app');
+  res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   res.header('Access-Control-Allow-Credentials', 'true');
